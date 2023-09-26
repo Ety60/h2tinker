@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="h2tinker",
+    name="h2tinkerHTTPS",
     version="0.1",
     author="Kaspar Papli",
     author_email="kaspar.papli@gmail.com",
