@@ -1,4 +1,4 @@
-from h2tinker import log
+from h2tinkerHTTPS import log
 
 
 def assert_error(condition: bool, msg: str, *msg_args):
