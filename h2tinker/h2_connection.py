@@ -32,7 +32,7 @@ class H2Connection(ABC):
         assert_error(not self.is_setup_completed, 'Connection setup has already been completed with '
                                                   '{}:{}', self.host, self.port)
 
-    def create_request_frames(self, method: str, path: str, stream_id: int,
+    def create_request_frames(self, method: str, path: str, scheme: str, stream_id: int,
                               headers: T.Dict[str, str] = None,
                               body: T.Optional[str] = None) -> h2.H2Seq:
         """
@@ -47,8 +47,8 @@ class H2Connection(ABC):
         header_table = h2.HPackHdrTable()
         req_str = (':method {}\n'
                    ':path {}\n'
-                   ':scheme http\n'
-                   ':authority {}:{}\n').format(method, path, self.host, self.port)
+                   ':scheme {}\n'
+                   ':authority {}:{}\n').format(method, path, scheme, self.host, self.port)
 
         if headers is not None:
             req_str += '\n'.join(map(lambda e: '{}: {}'.format(e[0], e[1]), headers.items()))
