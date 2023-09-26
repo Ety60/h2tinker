@@ -4,9 +4,9 @@ import ssl
 import scapy.contrib.http2 as h2
 import scapy.supersocket as supersocket
 
-from h2tinker import log
-from h2tinker.h2_connection import H2Connection
-from h2tinker.assrt import assert_error
+from h2tinkerHTTPS import log
+from h2tinkerHTTPS.h2_connection import H2Connection
+from h2tinkerHTTPS.assrt import assert_error
 
 
 class H2TLSConnection(H2Connection):
