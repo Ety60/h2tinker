@@ -6,9 +6,9 @@ import scapy.contrib.http2 as h2
 from scapy.compat import hex_bytes
 from scapy.data import MTU
 
-from h2tinker import log
-from h2tinker.assrt import assert_error
-from h2tinker.frames import is_frame_type, has_ack_set, create_settings_frame
+from h2tinkerHTTPS import log
+from h2tinkerHTTPS.assrt import assert_error
+from h2tinkerHTTPS.frames import is_frame_type, has_ack_set, create_settings_frame
 
 
 class H2Connection(ABC):
