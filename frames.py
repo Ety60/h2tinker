@@ -3,7 +3,7 @@ import typing as T
 import scapy.contrib.http2 as h2
 from scapy.packet import NoPayload
 
-from h2tinker.log import warn
+from h2tinkerHTTPS.log import warn
 
 
 def create_ping_frame(data: T.Union[str, bytes, None] = None,
